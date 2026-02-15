@@ -11,7 +11,7 @@ env:
 
 jobs:
   terraform:
-    if: github.repository == 'bjnandi/terraform-ci-cd-aws'
+    if: github.repository == 'chevvusandeep12/terraform-ci-cd-aws'
     name: "Terraform Plan"
     runs-on: ubuntu-latest
 
