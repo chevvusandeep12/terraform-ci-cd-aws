@@ -1,3 +1,4 @@
+# Demo change for pull request
 terraform {
   required_providers {
     aws = {
@@ -7,10 +8,10 @@ terraform {
   }
 
   cloud {
-    organization = "BjTechlife"
+    organization = "UKprojecttest"
 
     workspaces {
-      name = "ci-cd-tf"
+      name = "terraform-ci-cd-aws"
     }
   }
 }

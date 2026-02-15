@@ -6,9 +6,9 @@ on:
       - closed
 
 env:
-  TF_CLOUD_ORGANIZATION: "BjTechlife"
+  TF_CLOUD_ORGANIZATION: "UKprojecttest"
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
-  TF_WORKSPACE: "ci-cd-tf"
+  TF_WORKSPACE: "terraform-ci-cd-aws"
   CONFIG_DIRECTORY: "./"
 
 jobs:
