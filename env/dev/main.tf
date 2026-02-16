@@ -68,7 +68,7 @@ module "dev" {
   ## bastion host settings
   bastion_instance = {
     name          = "bastion-host"
-    instance_type = "t2.small"
+    instance_type = "t3.micro"
     ami           = "ami-04b70fa74e45c3917" #data.aws_ami.ubuntu.id
     key_name      = local.key_name
     root_block_device = [{
@@ -154,7 +154,7 @@ module "dev" {
   ## k8s ec2 settings
   k8s_instances = [{
     name           = "master"
-    instance_type  = "t2.small"
+    instance_type  = "t3.micro"
     ami            = "ami-04b70fa74e45c3917" #data.aws_ami.ubuntu.id
     key_name       = local.key_name
     security_group = ["master"]
@@ -162,14 +162,14 @@ module "dev" {
     },
     {
       name           = "worker-1"
-      instance_type  = "t2.micro"
+      instance_type  = "t3.micro"
       ami            = "ami-04b70fa74e45c3917" #data.aws_ami.ubuntu.id
       key_name       = local.key_name
       security_group = ["worker"]
     },
     {
       name           = "worker-2"
-      instance_type  = "t2.micro"
+      instance_type  = "t3.micro"
       ami            = "ami-04b70fa74e45c3917" #data.aws_ami.ubuntu.id
       key_name       = local.key_name
       security_group = ["worker"]
@@ -197,7 +197,7 @@ module "dev" {
   ## loadbalancer ec2 settings
   loadbalancer_instance = {
     name                        = "loadbalancer"
-    instance_type               = "t2.micro"
+    instance_type               = "t3.micro"
     ami                         = "ami-04b70fa74e45c3917" #data.aws_ami.ubuntu.id
     key_name                    = local.key_name
     associate_public_ip_address = true
